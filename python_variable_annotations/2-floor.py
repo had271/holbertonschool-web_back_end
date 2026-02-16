@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import math
-"""Module 2-floor.py:  floor the float."""
+"""Module 2-floor.py: provides a function to return the floor of a float."""
 
 
 def floor(n: float) -> int:
