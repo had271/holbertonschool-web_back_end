@@ -5,6 +5,14 @@
 from pymongo import MongoClient
 
 def log_stats():
+    """
+    Retrieve and display Nginx logs statistics from MongoDB.
+
+    Prints:
+        - Total number of logs
+        - Number of logs by HTTP method (GET, POST, PUT, PATCH, DELETE)
+        - Number of GET requests to /status
+    """
     client = MongoClient('mongodb://127.0.0.1:27017')
     db = client.logs
     nginx = db.nginx
