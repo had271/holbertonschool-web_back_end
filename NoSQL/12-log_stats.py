@@ -4,7 +4,7 @@
 
 from pymongo import MongoClient
 
-def main():
+def log_stats():
     client = MongoClient('mongodb://127.0.0.1:27017')
     db = client.logs
     nginx = db.nginx
@@ -23,6 +23,3 @@ def main():
     # Number of GET /status
     status_count = nginx.count_documents({"method": "GET", "path": "/status"})
     print(f"{status_count} status check")
-
-if __name__ == "__main__":
-    main()
